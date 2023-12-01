@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center,  #1b263b 50%, #0d1b2a 100%);
+    color: #fefae0;                                                               /* #fefae0; */ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Nasalization Rg';
+
+}
+
+@font-face {
+    font-family: 'Nasalization Rg';
+    src: local('nasalization'), url('nasalization.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#nasa-logo {
+    opacity: 1;
+    animation: left 2s ; 
+    animation-fill-mode: forwards; /* Keep the final state after the animation */
+    animation-delay: 1s;
+}
+
+h1 {
+    opacity: 0;
+    animation: right 2s ; 
+    animation-fill-mode: forwards; /* Keep the final state after the animation */
+    animation-delay: 1s;
+}
+
+@keyframes right {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(100px);
+    }
+}
+
+@keyframes left {
+    from {
+        transform: translateX(0) ;
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(-150px) scale(0.75);
+    }
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: -5px;
+    z-index: -1 ;
+    position: absolute;
+    
+}
+
+#nasa-logo {
+    width: 300px; 
+    margin-top: -60px; 
+    z-index: 5 ;
+    position: absolute;
+}
+
+
+
+
+/* Mobile Layout*/
+
+@media only screen and (max-width: 600px) {
+
+    @keyframes right {
+        from {
+            transform: translateX(0px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(40px);
+        }
+    }
+
+    @keyframes left {
+        from {
+            transform: translateX(0) ;
+        }
+        
+        to {
+            opacity: 1;
+            transform: translateX(-50px) scale(0.75);
+        }
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+        font-weight: bolder;
+        margin-top: 0;
+        z-index: -1 ;
+        position: absolute;
+        
+    }
+
+    #nasa-logo {
+        width: 100px; 
+        margin-top: -25px; 
+        z-index: 5 ;
+    }
+
+
+}
