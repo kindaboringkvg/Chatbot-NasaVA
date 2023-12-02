@@ -9,7 +9,7 @@ body {
     justify-content: center;
     height: 100vh;
     font-family: 'Nasalization Rg';
-
+    overflow: hidden;
 }
 
 @font-face {
@@ -78,13 +78,17 @@ h1 {
 
 @media only screen and (max-width: 600px) {
 
+    html, body{
+        overflow: hidden;
+    }
+    
     @keyframes right {
         from {
             transform: translateX(0px);
         }
         to {
             opacity: 1;
-            transform: translateX(40px);
+            transform: translateX(70px);
         }
     }
 
@@ -95,12 +99,12 @@ h1 {
         
         to {
             opacity: 1;
-            transform: translateX(-50px) scale(0.75);
+            transform: translateX(-70px) scale(0.75);
         }
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 3em;
         text-align: center;
         font-weight: bolder;
         margin-top: 0;
@@ -110,8 +114,8 @@ h1 {
     }
 
     #nasa-logo {
-        width: 100px; 
-        margin-top: -25px; 
+        width: 150px; 
+        margin-top: -35px; 
         z-index: 5 ;
     }
 
